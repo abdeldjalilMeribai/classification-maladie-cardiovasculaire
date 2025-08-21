@@ -1,8 +1,0 @@
-[2025-05-04 00:28:13,810] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'
-[2025-05-04 00:28:15,028] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'
-[2025-05-04 00:29:39,705] ERROR - Erreur de prétraitement: 'trestbps'
-[2025-05-04 00:29:39,707] ERROR - Erreur de prédiction: 'trestbps'
-[2025-05-04 00:32:57,487] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'
-[2025-05-04 00:33:27,305] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'
-[2025-05-04 00:35:02,639] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'
-[2025-05-04 00:36:23,055] ERROR - Erreur de chargement des modèles: [Errno 2] No such file or directory: 'models/heart_disease_model.pkl'

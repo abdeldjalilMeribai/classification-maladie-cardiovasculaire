@@ -5,5 +5,4 @@ numpy==2.1.3
 scikit-learn==1.6.1
 Werkzeug==2.3.6
 Jinja2==3.1.2
-<<<<<<< HEAD
 google-generativeai==0.8.5

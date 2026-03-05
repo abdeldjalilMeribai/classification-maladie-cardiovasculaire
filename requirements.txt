@@ -7,7 +7,3 @@ Werkzeug==2.3.6
 Jinja2==3.1.2
 <<<<<<< HEAD
 google-generativeai==0.8.5
-
-=======
-google-generativeai==0.8.5
->>>>>>> 7666d1f (changement de la configuration du serveur pour la préparation de l'hèbergement sur Render. Le port est désormais défini par une variable d'environnement, avec une valeur par défaut de 5000. et réduire la complexité.)

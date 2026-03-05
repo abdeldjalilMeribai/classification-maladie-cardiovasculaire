@@ -10,12 +10,18 @@ import os
 import hashlib
 import secrets
 from functools import wraps
+import google.generativeai as genai
 
 # Suppression des warnings sklearn
 warnings.filterwarnings('ignore', category=UserWarning)
 
 app = Flask(__name__)
 app.secret_key = 'votre_cle_secrete_ici_123!'  # Changez ceci en production
+
+# Configuration de l'API Gemini
+GEMINI_API_KEY = "AIzaSyB5g7SI_laK4ZKZMqF8lmqBNFbMR7GWngQ"  # Remplacez par votre vraie clé
+genai.configure(api_key=GEMINI_API_KEY)
+model_gemini = genai.GenerativeModel('gemini-2.5-pro')
 
 # Dictionnaire pour stocker les utilisateurs (en production, utilisez une base de données)
 USERS_DB = {}
@@ -451,6 +457,42 @@ def get_user_data():
 def chatbot():
     return render_template('chatbot.html', active_tab='chatbot')
 
+
+@app.route('/chatbot/send', methods=['POST'])
+@login_required
+def chatbot_send():
+    """Route pour envoyer un message au chatbot"""
+    try:
+        # Récupérer le message
+        data = request.get_json()
+        user_message = data.get('message', '')
+        
+        if not user_message:
+            return jsonify({'error': 'Message vide'}), 400
+        
+        # Préparer le prompt
+        prompt = f"""Tu es un assistant spécialisé en santé cardiaque nommé HeartAI. 
+Réponds de manière professionnelle et bienveillante en français. 
+Voici la question: {user_message}"""
+        
+        # Appeler l'API Gemini
+        response = model_gemini.generate_content(prompt)
+        
+        # Retourner la réponse
+        return jsonify({
+            'success': True,
+            'response': response.text
+        })
+        
+    except Exception as e:
+        print(f"Erreur Gemini API: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': 'Une erreur est survenue lors du traitement de votre message'
+        }), 500
+
+
+
 if __name__ == '__main__':
     print("Démarrage de l'application HeartAI...")
     print(f"Colonnes attendues par le modèle: {len(FEATURE_COLUMNS)}")
@@ -462,4 +504,5 @@ if __name__ == '__main__':
         print(f"Fichier de données utilisateur créé: {USER_DATA_FILE}")
     
     print("Application prête!")
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)

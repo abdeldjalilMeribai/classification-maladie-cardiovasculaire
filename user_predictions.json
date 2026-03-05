@@ -25,5 +25,59 @@
         "thal": 6.0
       }
     }
+  },
+  "aizen": {
+    "last_prediction": {
+      "date": "2025-11-26T10:51:45.393498",
+      "heartRate": 95,
+      "bloodPressure": "100/80",
+      "cholesterol": 200,
+      "glucose": 140,
+      "age": 22,
+      "prediction": 0,
+      "probability": 0.4065721489370489,
+      "all_form_data": {
+        "age": 22.0,
+        "sex": 1.0,
+        "cp": 1.0,
+        "trestbps": 100.0,
+        "chol": 200.0,
+        "fbs": 1.0,
+        "restecg": 0.0,
+        "thalach": 95.0,
+        "exang": 0.0,
+        "oldpeak": 1.2,
+        "slope": 2.0,
+        "ca": 0.0,
+        "thal": 3.0
+      }
+    }
+  },
+  "itachi": {
+    "last_prediction": {
+      "date": "2026-01-12T11:38:21.726796",
+      "heartRate": 100,
+      "bloodPressure": "100/80",
+      "cholesterol": 200,
+      "glucose": 140,
+      "age": 20,
+      "prediction": 0,
+      "probability": 0.3206137112720793,
+      "all_form_data": {
+        "age": 20.0,
+        "sex": 0.0,
+        "cp": 3.0,
+        "trestbps": 100.0,
+        "chol": 200.0,
+        "fbs": 0.0,
+        "restecg": 1.0,
+        "thalach": 100.0,
+        "exang": 0.0,
+        "oldpeak": 1.7,
+        "slope": 2.0,
+        "ca": 2.0,
+        "thal": 6.0
+      }
+    }
   }
 }

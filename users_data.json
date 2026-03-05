@@ -4,5 +4,23 @@
     "password_hash": "f7633685e439532d78d07e57cf69e34f5248732a612d801fff0de23d3c8b308d",
     "salt": "0d10830545af0a764dd2c5a7f5ca4fac",
     "created_at": "2025-08-19T23:21:04.070449"
+  },
+  "aizen": {
+    "email": "aizen@gmail.com",
+    "password_hash": "fb108f54adc63d60979537e149e4bab0c241d6a733e0531fac5f8379e3cdcfd6",
+    "salt": "39177f43a2a8c70e74d45ac07507fb42",
+    "created_at": "2025-11-26T10:50:21.022314"
+  },
+  "aizenS": {
+    "email": "aizensosuki@gmail.com",
+    "password_hash": "38ba11142b5c4a7ab23b9b59fd4954c8a03f98093a34b090f71c6c6be15e641b",
+    "salt": "7e7809f8ee4e06321d6bc6ef6b240ea9",
+    "created_at": "2025-11-27T21:18:50.182627"
+  },
+  "itachi": {
+    "email": "itachi.uchiha@gmail.com",
+    "password_hash": "7f728c034700e8c2cae18b6d4fd6ee7acd039988ea3c988486027e4e107c6f51",
+    "salt": "8c83a534eb08076a43de8a84fcbfb1f6",
+    "created_at": "2026-01-12T11:36:52.201205"
   }
 }
